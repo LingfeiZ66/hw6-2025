@@ -3,8 +3,12 @@ var video = document.getElementById('player1');
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
+	video = document.querySelector("#player1");
 	video.autoplay = false;
+	console.log("Auto Play is set to " + video.autoplay);
 	video.loop = false;
+	console.log("Loop is set to " + video.loop);
+	video.load();
 });
 
 // Play the video and update the volume information. 
@@ -57,9 +61,8 @@ document.getElementById("mute").addEventListener("click", function() {
 
 // Change the volume based on the slider and update the volume information.
 document.getElementById("slider").addEventListener("change", function() {
-	video.volume = volumeSlider.value / 100;
-    volumeDisplay.textContent = volumeSlider.value + '%';
-    console.log(`Volume set to: ${volumeSlider.value}%`);
+	video.volume = document.querySelector("#slider").value / 100; 
+	document.querySelector("#volume").innerHTML =  video.volume*100 + "%";
 });
 
 //Utilize the existing oldSchool class on the video element
