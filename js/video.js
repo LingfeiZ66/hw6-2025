@@ -1,14 +1,13 @@
 // Initialize the video element and turn off autoplay and turn off looping.
 var video = document.getElementById('player1');
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
 	console.log("Good job opening the window")
 	video = document.querySelector("#player1");
 	video.autoplay = false;
-	console.log("Auto Play is set to " + video.autoplay);
 	video.loop = false;
-	console.log("Loop is set to " + video.loop);
-	video.load();
+	console.log("Autoplay is " + video.autoplay);
+	console.log("Loop is " + video.loop);
 });
 
 // Play the video and update the volume information. 
