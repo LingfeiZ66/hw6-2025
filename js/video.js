@@ -13,7 +13,7 @@ window.addEventListener("load", function () {
 // Play the video and update the volume information. 
 document.getElementById("play").addEventListener("click", function() {
 	video.play();
-    volumeInfo.textContent = Math.round(video.volume * 100) + '%';
+    document.getElementById("volume").textContent = slider.value + "%";
 });
 
 //Pause the video 
