@@ -13,10 +13,10 @@ window.addEventListener("load", function () {
 // Play the video and update the volume information. 
 document.getElementById("play").addEventListener("click", function() {
 	video.play();
-    document.getElementById("volume").textContent = slider.value + "%";
+    document.getElementById("volume").textContent = Math.round(video.volume * 100) + "%";
 });
 
-//Pause the video 
+//Pause the video
 document.getElementById("pause").addEventListener("click", function() {
 	console.log("Pause video");
 	video.pause();
